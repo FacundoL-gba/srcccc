@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Lista de Productos</span>
+            <button type="button" class="btn btn-success" routerLink="/crear-producto">Agregar</button>
+            <h5 *ngIf="productos.length == 0">¡No hay productos en la lista!</h5>
+            <table *ngIf="productos.length > 0" class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let producto of productos">
+                    <td>{{ producto.nombre}}</td>
+                    <td>{{ producto.precio | currency }} kg</td>
+                    <td><i class="pi pi-pencil" [routerLink]="['/editar-producto', producto.id]"></i></td>
+                    <td (click)="eliminarProducto(producto.id)"><i class="pi pi-trash"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,65 @@
+.containers {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.partners img {
+    transition: all 3.s ease;
+}
+.shadow:hover {
+    box-shadow: 0 0 10px 1px #dbdbdb;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.precio {
+    margin-top: 15px;
+    font-size: 38px;
+    font-family: 'Oswald', sans-serif;
+}
+h3 {
+    text-align: center;
+    margin-top: 5rem;
+    color: rgb(0, 0, 0);
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.subtitulo{
+    font-size: 38px;
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 10px;
+}
+h4 {
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+}
+img {
+    width: 50%;
+    margin-left: 21rem;
+}
+a {
+    font-family: 'Kanit', sans-serif;
+    color: #0e002f;
+}
+.marca{
+width: 90px;
+height: 200px;
+}
+.marca2{
+width:100px ;
+height:200px ;
+}
+.marca3{
+width:100px ;
+height:200px ;
+}
+.marca4{
+width:100px ;
+height:200px ;
+}
+
+.mira{
+    color: black;
+}

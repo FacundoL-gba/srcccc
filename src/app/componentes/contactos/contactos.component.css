@@ -1,0 +1,13 @@
+.text {
+    color: #207545;
+}
+.btn {
+    color: white;
+    background-color: #207545;
+}
+.btn:hover{
+    color: #207545;
+}
+.bg {
+    background-color: #207545;
+}

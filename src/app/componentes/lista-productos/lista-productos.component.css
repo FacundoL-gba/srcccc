@@ -1,0 +1,22 @@
+.container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.btn {
+    float: right;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.pi-pencil {
+    color: rgb(2, 18, 245);
+    cursor: pointer;
+}
+.pi-trash {
+    color: red;
+    cursor: pointer;
+}
+h5 {
+    margin-top: 30px;
+}
+th {
+    font-family: 'Josefin Sans', sans-serif;
+}

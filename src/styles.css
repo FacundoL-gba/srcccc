@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import '~ngx-toastr/toastr';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+body {
+    background: #e2ddd9;  /* fallback for old browsers */
+}
+
+h1 { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+    font-size: 30px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 19.8px; 
+    margin-bottom: 15px;
+}
+@keyframes bounce {
+    30% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+.animar:hover {
+    animation: bounce 1s;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo {
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.body {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.p-button-rounded {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #be0029;
+    background-color: #be0029;
+    border-color: #be0029;
+}
+
+.form-floating {
+    text-align: start;
+}
+.errorLabel {
+    margin-left: 5px;
+}

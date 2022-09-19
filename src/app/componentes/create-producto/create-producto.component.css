@@ -1,0 +1,16 @@
+.p-button-success {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: right;
+}
+.p-button-secondary {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+span {
+    background-color: red;
+}
+.carga {
+    float:none;
+}

@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../../assets/img/Login.png" alt="Login">
+        <h1>Login</h1>
+        <form (ngSubmit)="login()" [formGroup]="loginUsuario">
+            <div class="form-floating mb-3">
+                <input type="email" formControlName="email" class="form-control"  placeholder="name@example.com">
+                <label>Email</label>
+                <span *ngIf="loginUsuario.get('email')?.hasError('required') && loginUsuario.get('email')?.touched" class="text-danger errorLabel">
+                    El <strong>correo</strong> es obligatorio
+                </span>
+                <span *ngIf="loginUsuario.get('email')?.hasError('email') && loginUsuario.get('email')?.touched" class="text-danger errorLabel">
+                    El <strong>correo</strong> no es valido
+                </span>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" formControlName="password" class="form-control"  placeholder="Password">
+                <label>Contraseña</label>
+                <span *ngIf="loginUsuario.get('password')?.hasError('required') && loginUsuario.get('password')?.touched" class="text-success errorLabel">
+                    La <strong>contraseña</strong> es obligatoria
+                </span>
+            </div>
+            <button pButton pRipple [disabled]="loginUsuario.invalid" type="submit" label="Ingresar" class="p-button-rounded p-button-success animar"></button>
+            <p>¿No tienes cuenta? <a routerLink="/registrar-usuario">¡Crea una!</a></p>
+            <p>¿Problemas con la contraseña? <a routerLink="/recuperar-password">Recuperala</a></p>
+        </form>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

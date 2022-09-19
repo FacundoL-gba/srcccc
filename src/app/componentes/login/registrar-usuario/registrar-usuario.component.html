@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../../assets/img/Login.png" alt="Login">
+        <h1>Registrarse</h1>
+        <form (ngSubmit)="registrar()" [formGroup]="registrarUsuario">
+            <div class="form-floating mb-3">
+                <!-- Con el formGroup conectamos el html con el ts y con la directiva formControlName conectamos-->
+                <!-- Los parametros con cada input -->
+                <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+                <label>Email</label>
+                <span *ngIf="registrarUsuario.get('email')?.hasError('required') && registrarUsuario.get('email')?.touched" class="text-danger errorLabel">
+                    El <strong>correo</strong> es obligatorio
+                </span>
+                <span *ngIf="registrarUsuario.get('email')?.hasError('email') && registrarUsuario.get('email')?.touched" class="text-danger errorLabel">
+                    El <strong>correo</strong> no es valido
+                </span>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                <label>Contraseña</label>
+                <span *ngIf="registrarUsuario.get('password')?.hasError('required') && registrarUsuario.get('password')?.touched" class="text-danger errorLabel">
+                    La <strong>contraseña</strong> es obligatorio
+                </span>
+                <span *ngIf="registrarUsuario.get('password')?.hasError('minlength') && registrarUsuario.get('password')?.touched" class="text-danger errorLabel">
+                    La <strong>contraseña</strong> debe tener 6 caracteres como minimo
+                </span>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" formControlName="repetirPassword" placeholder="Password">
+                <label>Repetir Contraseña</label>
+            </div>
+            <!-- Con este boton se clickea se ejecuta el metodo registrar() en el ts-->
+            <button pButton pRipple type="submit" [disabled]="registrarUsuario.invalid" label="Registrarse" class="p-button-rounded p-button-success animar"></button>
+            <a routerLink="/login">Volver</a>
+        </form>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

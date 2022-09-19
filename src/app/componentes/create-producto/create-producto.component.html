@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container pt-4 pb-4">
+    <div class="row">
+        <div class="col-lg-6 offset-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h2>{{ titulo }}</h2>                   
+                    <span class="badge" *ngIf="submitted && createProducto.invalid">TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+                    <form class="mt-4" [formGroup]="createProducto" (ngSubmit)="agregarEditarProucto()">
+                        <div class="row pt-4">
+                            <div class="col">
+                                <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col">
+                                <input type="number" class="form-control" formControlName="precio" placeholder="Precio">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button pButton pRipple type="button" routerLink="/productos" label="Volver" icon="pi pi-chevron-left"  class="p-button-raised p-button-secondary p-button-text"></button>
+                            </div>
+                            <div class="col">
+                                <button pButton pRipple type="submit" label="Agregar" icon="pi pi-check" class="p-button-raised p-button-success p-button-text"></button>
+                            </div> 
+                        </div>
+                        <div *ngIf="loading" class="carga spinner-border text-primary float-right" role="status">
+                            <span class="visually-hidden spinner">Loading...</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
